@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+<title>CASE FILES</title>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Barlow:wght@400;600&family=Barlow+Condensed:wght@600;700&family=IBM+Plex+Mono&display=swap">
+<link rel="stylesheet" href="style.css"></head>
+<body data-m="menu">
+<canvas id="bgfx" aria-hidden="true"></canvas>
+<header id="top"><b class="logo">CASE FILES</b><span id="chap"></span><div class="pb"><i id="pf"></i></div><span id="pp"></span><nav id="pips"></nav><a class="btn sm g" id="home" href="index.html" title="Back to the Hub">&#8962; HOME</a><button class="btn sm g" id="bgb" type="button" aria-label="Toggle background effect">FX: ON</button><button class="btn sm g" id="snd" title="Sound" aria-label="Toggle sound">🔇</button><button class="btn sm g" id="mn">MENU</button></header>
+<main id="game">
+ <section id="scene"></section>
+ <aside id="prof" class="px"><div class="pr"><div id="pic"></div><b>PROF.</b><button class="btn sm g" id="bx" aria-label="Collapse mentor panel" aria-expanded="true">▾</button></div><p id="pt"></p><p id="ph"></p>
+  <div class="pbtn"><button class="btn sm" id="bc">CONTINUE</button><button class="btn sm g" id="bh">HINT</button><button class="btn sm g" id="bi">INVESTIGATE</button><button class="btn sm g" id="bm" aria-pressed="true">MENTOR: ON</button></div></aside>
+ <div id="fx" class="fx"></div>
+</main>
+<div id="modal" hidden></div>
+<div id="toast" aria-live="polite"></div>
+<script src="core.js"></script><script src="data.js"></script><script src="art.js"></script><script src="game.js"></script><script src="bg.js"></script>
+</body></html>

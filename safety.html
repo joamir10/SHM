@@ -1,0 +1,106 @@
+<!DOCTYPE html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Safety Manager Training: Chapters</title>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Barlow:wght@400;600&family=Barlow+Condensed:wght@600;700&display=swap">
+<style>
+:root{color-scheme:dark;--bg:#16181a;--pn:#202428;--ln:#3a4046;--tx:#e8e6df;--mu:#9aa1a6;--ye:#f2b705;--rd:#d63a2f;--gr:#2f9e5b;box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
+*{box-sizing:border-box}html{scroll-padding-top:env(safe-area-inset-top,0px)}
+body{margin:0;background:var(--bg);color:var(--tx);font:15px/1.5 "Barlow","Segoe UI",Arial,sans-serif}
+h1,h2,h3{font-family:"Barlow Condensed","Arial Narrow",Arial,sans-serif;margin:0;letter-spacing:.3px}
+.top{background:repeating-linear-gradient(-45deg,var(--ye) 0 14px,#111 14px 28px);background-size:40px 40px;padding:5px 0;animation:mv 2s linear infinite}
+@keyframes mv{to{background-position:40px 0}}
+.top div{background:var(--bg);padding:8px 14px;display:flex;flex-wrap:wrap;gap:10px;align-items:center;justify-content:space-between}
+.top h1{font-size:26px;text-transform:uppercase}.sub{color:var(--mu);font-size:13px}
+button,.btn{font:inherit;background:var(--pn);color:var(--tx);border:1px solid var(--ln);padding:8px 14px;border-radius:3px;cursor:pointer;transition:.15s;text-decoration:none;display:inline-block}
+button:hover,.btn:hover{border-color:var(--ye)}button:focus-visible,.btn:focus-visible,input:focus-visible,summary:focus-visible{outline:2px solid var(--ye);outline-offset:2px}
+.y{background:var(--ye);color:#111;font-weight:700;border-color:var(--ye)}.p{background:var(--rd);border-color:var(--rd);font-weight:700}
+main{max-width:1200px;margin:0 auto;padding:14px}
+.hero{display:flex;flex-wrap:wrap;gap:16px;align-items:center;background:var(--pn);border:1px solid var(--ln);border-left:6px solid var(--ye);padding:18px}
+.hero>div:first-child{flex:2 1 380px}.hero h2{font-size:44px;text-transform:uppercase;color:var(--ye);line-height:1}
+.hero p{margin:8px 0;max-width:620px}.row{display:flex;flex-wrap:wrap;gap:8px;margin-top:12px}
+.ring{flex:1 1 180px;display:flex;flex-direction:column;align-items:center;gap:4px}
+.ring svg{width:150px;height:150px}.ring b{font:700 38px "Barlow Condensed",Arial Narrow,Arial,sans-serif;color:var(--ye)}
+.hud{display:flex;flex-wrap:wrap;gap:8px;margin:12px 0}
+.st{background:var(--pn);border:1px solid var(--ln);border-left:4px solid var(--ye);padding:4px 12px;flex:1 1 130px}
+.st b{display:block;font:700 24px "Barlow Condensed",Arial Narrow,Arial,sans-serif}.st span{color:var(--mu);font-size:12px}
+.tools{display:flex;flex-wrap:wrap;gap:8px;align-items:center;margin:14px 0 10px}
+.tools input{flex:1 1 220px;background:var(--pn);color:var(--tx);border:1px solid var(--ln);padding:8px 12px;border-radius:3px;font:inherit}
+.chip.on{background:var(--ye);color:#111;border-color:var(--ye);font-weight:700}
+.grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(270px,1fr));gap:12px}
+.card{background:var(--pn);border:1px solid var(--ln);border-top:4px solid var(--ye);padding:14px;display:flex;flex-direction:column;gap:6px;animation:in .35s both;transition:transform .15s,border-color .15s}
+.card:hover{transform:translateY(-3px);border-color:var(--ye)}
+@keyframes in{from{opacity:0;transform:translateY(10px)}}
+.no{font:700 13px "Barlow Condensed",Arial Narrow,Arial,sans-serif;letter-spacing:2px;text-transform:uppercase;color:var(--ye)}
+.card h3{font-size:26px;text-transform:uppercase}.card p{margin:0;color:var(--tx)}
+.tag{display:inline-block;font-size:12px;padding:1px 8px;border:1px solid var(--ln);color:var(--mu);margin-right:4px}
+.bar{height:8px;background:#000;border:1px solid var(--ln)}.bar i{display:block;height:100%;width:0;background:var(--ye);transition:width .6s}
+.bar.done i{background:var(--gr)}
+details{background:#181a1c;border-left:4px solid var(--ln);padding:4px 10px}summary{cursor:pointer;color:var(--mu)}
+details ul{margin:6px 0 4px 18px;padding:0}li{margin:2px 0}
+.card .btn{margin-top:auto;text-align:center}
+.empty{display:none;padding:20px;text-align:center;color:var(--mu);border:1px dashed var(--ln)}
+footer{margin:22px 0 10px;color:var(--mu);font-size:13px;display:flex;flex-wrap:wrap;gap:10px;justify-content:space-between;align-items:center}
+kbd{background:#000;border:1px solid var(--ln);padding:0 6px;border-radius:3px;font-size:12px}
+@media(prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important}}
+#fx{position:fixed;inset:0;width:100%;height:100%;z-index:-1;display:block}
+</style></head><body>
+<canvas id="fx" aria-hidden="true"></canvas>
+<div class="top"><div><h1>Safety Manager Training</h1><span class="sub">Role: Safety Manager Engineer &middot; Interactive inspection chapters</span><a class="btn" href="index.html" title="Back to the Hub">&#8962; Home</a></div></div>
+<main>
+<section class="hero">
+<div><h2>Choose your inspection</h2><p>Walk each site as the Safety Manager Engineer, study what you see, and make the call. Every chapter is its own interactive page with a score and a final report.</p>
+<div class="row"><a class="btn y" id="cont" href="#">Continue</a><button id="rnd">Surprise me</button><button id="fxb">Background: On</button><button id="rsall">Reset all progress</button></div></div>
+<div class="ring"><svg viewBox="0 0 120 120" aria-hidden="true"><circle cx="60" cy="60" r="50" fill="none" stroke="#000" stroke-width="12"/><circle id="arc" cx="60" cy="60" r="50" fill="none" stroke="#f2b705" stroke-width="12" stroke-dasharray="314" stroke-dashoffset="314" transform="rotate(-90 60 60)" style="transition:stroke-dashoffset .8s"/></svg><b id="pc">0%</b><span class="sub">Overall progress</span></div>
+</section>
+<div class="hud" id="hud"></div>
+<div class="tools"><input id="q" type="search" placeholder="Search chapters or topics (press /)" aria-label="Search chapters"><span id="chips"></span></div>
+<div class="grid" id="grid"></div><div class="empty" id="em">No chapters match your search.</div>
+<footer><span>Shortcuts: <kbd>1</kbd>&ndash;<kbd>4</kbd> open a chapter &middot; <kbd>/</kbd> search &middot; <kbd>C</kbd> continue</span><span>Progress is saved in this browser.</span></footer>
+</main>
+<script>
+const CH=[
+{f:'chapter_1_2.html',no:'Chapter 1 & 2',t:'Factory Terms',g:'Terms',k:'sm_terms',n:13,m:'Multiple choice',d:'Walk a factory floor and match 13 situations to the correct safety term.',l:['Hazard, danger, risk and severity','Accident, incident and near miss','Safety vs health','Physical and economic infeasibility']},
+{f:'chapter_3.html',no:'Chapter 3',t:'Accident Investigation',g:'Investigation',k:'aig1',n:42,m:'Classify findings',d:'Investigate nine zones, collect evidence and classify every finding.',l:['Accident and incident investigation','Ladder accident and common causes','Engineering defences and fail-safe design','FMEA, fault trees and investigation models']},
+{f:'chapter_13.html',no:'Chapter 13',t:'Fire Safety',g:'Fire',k:'msf1',n:31,m:'Hazard or safe',d:'Walk an industrial room and decide whether each object is a fire hazard or compliant.',l:['Exits and emergency egress','Electrical clearances and housekeeping','Hot work and flammable liquids','Equipment overheating']},
+{f:'chapter_15.html',no:'Chapter 15',t:'Mechanical Safety',g:'Mechanical',k:'msm1',n:22,m:'Hazard or safe',d:'Inspect a mechanical workshop and judge each machine and its guarding.',l:['Point of operation guards','Power transmission and nip points','Rotating parts and lockout/tagout','Material handling and machine anchoring']}];
+const $=id=>document.getElementById(id);let F='All';
+function prog(c){try{const o=JSON.parse(localStorage.getItem(c.k)||'{}');return Math.min(c.n,Object.keys(o.dec||o.a||{}).length)}catch(e){return 0}}
+function last(){try{return localStorage.getItem('sm_last')}catch(e){return null}}
+function render(){const q=$('q').value.trim().toLowerCase(),P=CH.map(prog),tot=CH.reduce((a,c)=>a+c.n,0),dn=P.reduce((a,b)=>a+b,0),pc=Math.round(100*dn/tot);
+$('arc').style.strokeDashoffset=314*(1-pc/100);$('pc').textContent=pc+'%';
+$('hud').innerHTML=[['Chapters',CH.length],['Chapters completed',CH.filter((c,i)=>P[i]>=c.n).length],['Items inspected',dn+' / '+tot],['Last opened',(CH.find(c=>c.f==last())||{no:'None yet'}).no]].map(a=>`<div class="st"><span>${a[0]}</span><b>${a[1]}</b></div>`).join('');
+const l=CH.find(c=>c.f==last()),i0=CH.findIndex((c,i)=>P[i]<c.n);$('cont').href=(l||CH[i0<0?0:i0]).f;$('cont').textContent=l?'Continue: '+l.no:'Start: '+CH[0].no;
+let sh=0;$('grid').innerHTML=CH.map((c,i)=>{const hay=(c.no+c.t+c.g+c.d+c.l.join(' ')).toLowerCase();if((F!='All'&&c.g!=F)||(q&&!hay.includes(q)))return'';sh++;const p=P[i],w=Math.round(100*p/c.n);
+return`<article class="card" style="animation-delay:${sh*60}ms"><span class="no">${c.no}</span><h3>${c.t}</h3><p>${c.d}</p><div><span class="tag">${c.g}</span><span class="tag">${c.n} items</span><span class="tag">${c.m}</span></div>
+<details><summary>What you will cover</summary><ul>${c.l.map(x=>'<li>'+x+'</li>').join('')}</ul></details>
+<div class="bar ${p>=c.n?'done':''}"><i style="width:${w}%"></i></div><span class="sub">${p>=c.n?'Completed':p?p+' of '+c.n+' inspected':'Not started'}</span>
+<a class="btn ${p?'':'y'}" href="${c.f}">${p>=c.n?'Review chapter':p?'Resume chapter':'Start chapter'}</a></article>`}).join('');$('em').style.display=sh?'none':'block'}
+$('chips').innerHTML=['All',...new Set(CH.map(c=>c.g))].map(g=>`<button class="chip ${g=='All'?'on':''}" data-g="${g}">${g}</button> `).join('');
+$('chips').onclick=e=>{const b=e.target.closest('[data-g]');if(!b)return;F=b.dataset.g;document.querySelectorAll('.chip').forEach(x=>x.classList.toggle('on',x===b));render()};
+$('q').oninput=render;$('rnd').onclick=()=>{location.href=CH[Math.floor(Math.random()*CH.length)].f};
+let rt=0;$('rsall').onclick=function(){if(rt){clearTimeout(rt);rt=0;this.textContent='Reset all progress';try{CH.forEach(c=>localStorage.removeItem(c.k));localStorage.removeItem('sm_last')}catch(e){}render()}else{this.textContent='Confirm reset?';rt=setTimeout(()=>{rt=0;this.textContent='Reset all progress'},3000)}};
+addEventListener('keydown',e=>{if(e.target.matches('input')){if(e.key=='Escape')e.target.blur();return}if(e.ctrlKey||e.metaKey||e.altKey)return;const k=e.key.toLowerCase();
+if(k=='/'){e.preventDefault();$('q').focus()}else if(k=='c')location.href=$('cont').href;else if(k>='1'&&k<='4')location.href=CH[+k-1].f});
+addEventListener('pageshow',render);render();
+(function(){const cv=$('fx'),x=cv.getContext('2d'),rm=matchMedia('(prefers-reduced-motion:reduce)').matches;let w,h,d,on=true,M={x:-999,y:-999,a:0},S=[],raf=0;
+try{on=localStorage.getItem('sm_fx')!='0'&&!rm}catch(e){on=!rm}
+const GAP=44,mk=(px,py,burst)=>{const a=burst?Math.random()*6.283:-1.57+(Math.random()-.5)*.8,v=burst?1.5+Math.random()*4:.3+Math.random()*.7;return{x:px,y:py,vx:Math.cos(a)*v,vy:Math.sin(a)*v,l:burst?1:2+Math.random(),b:burst,c:Math.random()<.7?'242,183,5':'255,122,26'}};
+function size(){d=Math.min(2,devicePixelRatio||1);w=innerWidth;h=innerHeight;cv.width=w*d;cv.height=h*d;x.setTransform(d,0,0,d,0,0)}
+function seed(){S=S.filter(p=>p.b);for(let i=0;i<Math.round(w*h/26000);i++){const p=mk(Math.random()*w,Math.random()*h,false);p.l=Math.random()*3;S.push(p)}}
+function frame(t){x.clearRect(0,0,w,h);M.a*=.96;
+for(let gx=GAP/2;gx<w;gx+=GAP)for(let gy=GAP/2;gy<h;gy+=GAP){const dx=gx-M.x,dy=gy-M.y,dd=Math.hypot(dx,dy),n=dd<170?1-dd/170:0,o=dd>0&&dd<170?n*9:0,px=gx+dx/dd*o||gx,py=gy+dy/dd*o||gy;
+x.fillStyle=n?`rgba(242,183,5,${.18+n*.8})`:'rgba(154,161,166,.16)';x.beginPath();x.arc(px,py,1.3+n*2.4,0,7);x.fill()}
+const sweep=(t*.03)%(w+400)-200;x.fillStyle='rgba(242,183,5,.035)';x.beginPath();x.moveTo(sweep,0);x.lineTo(sweep+90,0);x.lineTo(sweep-50,h);x.lineTo(sweep-140,h);x.fill();
+for(let i=S.length-1;i>=0;i--){const p=S[i],dx=p.x-M.x,dy=p.y-M.y,dd=Math.hypot(dx,dy);if(dd<130&&dd>0){p.vx+=dx/dd*.12;p.vy+=dy/dd*.12}
+if(p.b)p.vy+=.08;p.vx*=p.b?.985:.995;p.vy*=p.b?.985:.995;p.x+=p.vx;p.y+=p.vy;p.l-=p.b?.018:.003;
+if(p.l<=0||p.y<-20||p.x<-20||p.x>w+20||p.y>h+20){if(p.b){S.splice(i,1)}else Object.assign(p,mk(Math.random()*w,h+10,false));continue}
+const al=Math.min(1,p.l);x.strokeStyle=`rgba(${p.c},${al*.8})`;x.lineWidth=p.b?2:1.4;x.beginPath();x.moveTo(p.x,p.y);x.lineTo(p.x-p.vx*4,p.y-p.vy*4);x.stroke()}
+if(M.a>.02){const g=x.createRadialGradient(M.x,M.y,0,M.x,M.y,200);g.addColorStop(0,`rgba(242,183,5,${.1*M.a})`);g.addColorStop(1,'rgba(242,183,5,0)');x.fillStyle=g;x.fillRect(M.x-200,M.y-200,400,400)}
+raf=on&&!document.hidden?requestAnimationFrame(frame):0}
+function run(){cancelAnimationFrame(raf);if(on){raf=requestAnimationFrame(frame)}else x.clearRect(0,0,w,h);$('fxb').textContent='Background: '+(on?'On':'Off')}
+addEventListener('pointermove',e=>{M.x=e.clientX;M.y=e.clientY;M.a=1});
+addEventListener('pointerdown',e=>{if(!on||e.target.closest('a,button,input,summary,#c,.panel,.modal,.ov,.hero,.card,.top,.hud'))return;for(let i=0;i<26;i++)S.push(mk(e.clientX,e.clientY,true))});
+addEventListener('resize',()=>{size();seed()});document.addEventListener('visibilitychange',()=>{if(!document.hidden&&on&&!raf)run()});
+$('fxb').onclick=()=>{on=!on;try{localStorage.setItem('sm_fx',on?'1':'0')}catch(e){}run()};
+size();seed();run()})();
+
+</script></body></html>

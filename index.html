@@ -1,0 +1,99 @@
+<!DOCTYPE html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Safety Training Hub</title>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Barlow:wght@400;600&family=Barlow+Condensed:wght@600;700&family=IBM+Plex+Mono&display=swap">
+<style>
+:root{color-scheme:dark;--bg:#16181a;--pn:#202428;--ln:#3a4046;--tx:#e8e6df;--mu:#9aa1a6;--ye:#f2b705;--rd:#d63a2f;--gr:#2f9e5b;--bl:#7f93a6;box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
+*{box-sizing:border-box}html{scroll-padding-top:env(safe-area-inset-top,0px)}
+body{margin:0;background:var(--bg);color:var(--tx);font:16px/1.55 "Barlow","Segoe UI",Arial,sans-serif}
+h1,h2,h3{font-family:"Barlow Condensed","Arial Narrow",Arial,sans-serif;margin:0;line-height:1.05;text-transform:uppercase;letter-spacing:.4px}
+#bgfx{position:fixed;inset:0;width:100%;height:100%;z-index:-1;display:block}
+.top{background:repeating-linear-gradient(-45deg,var(--ye) 0 14px,#111 14px 28px);background-size:40px 40px;padding:5px 0;animation:mv 2s linear infinite}
+@keyframes mv{to{background-position:40px 0}}
+.top div{background:var(--bg);padding:8px 14px;display:flex;flex-wrap:wrap;gap:10px;align-items:center;justify-content:space-between}
+.logo{font:700 26px "Barlow Condensed",Arial Narrow,Arial,sans-serif;color:var(--ye);text-transform:uppercase;letter-spacing:.4px}
+.sub{color:var(--mu);font-size:13px}
+.nv{display:flex;gap:8px;flex-wrap:wrap}
+button,.btn{font:inherit;background:var(--pn);color:var(--tx);border:1px solid var(--ln);padding:8px 14px;border-radius:3px;cursor:pointer;transition:.15s;text-decoration:none;display:inline-block}
+button:hover,.btn:hover{border-color:var(--ye)}button:focus-visible,.btn:focus-visible,a:focus-visible{outline:2px solid var(--ye);outline-offset:2px}
+.y{background:var(--ye);color:#111;font-weight:700;border-color:var(--ye)}
+main{max-width:1200px;margin:0 auto;padding:14px}
+.hero{padding:34px 18px 18px;border-left:6px solid var(--ye);background:var(--pn);border-top:1px solid var(--ln);border-right:1px solid var(--ln);border-bottom:1px solid var(--ln);position:relative}
+.hero .k{font:700 14px "Barlow Condensed",Arial Narrow,Arial,sans-serif;letter-spacing:3px;text-transform:uppercase;color:var(--ye)}
+.hero h1{font-size:clamp(40px,8vw,84px);color:var(--tx);margin:6px 0 10px}.hero h1 em{font-style:normal;color:var(--ye)}
+.hero p{max-width:640px;margin:0;color:var(--mu)}
+h2.sec{font-size:30px;margin:30px 0 4px;color:var(--ye)}.sec+p{margin:0 0 14px;color:var(--mu)}
+.modes{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:14px}
+.mode{background:var(--pn);border:1px solid var(--ln);border-top:4px solid var(--ye);padding:18px;display:flex;flex-direction:column;gap:8px;animation:in .45s both;transition:transform .15s,border-color .15s;position:relative}
+.mode:nth-child(2){animation-delay:.08s}.mode:nth-child(3){animation-delay:.16s}
+.mode:hover{transform:translateY(-4px);border-color:var(--ye)}
+@keyframes in{from{opacity:0;transform:translateY(12px)}}
+.mode .no{font:700 13px "Barlow Condensed",Arial Narrow,Arial,sans-serif;letter-spacing:3px;color:var(--ye);text-transform:uppercase}
+.mode .ic{font-size:42px;line-height:1}
+.mode h3{font-size:34px}.mode p{margin:0}
+.tags{display:flex;flex-wrap:wrap;gap:4px}.tag{font:12px "IBM Plex Mono",monospace;padding:1px 8px;border:1px solid var(--ln);color:var(--mu)}
+.mode ul{margin:2px 0 6px 18px;padding:0;color:var(--mu);font-size:14px}.mode li{margin:2px 0}
+.mode .btn{margin-top:auto;text-align:center;font-weight:700;font-size:17px;padding:11px 14px}
+.mode .kb{position:absolute;top:12px;right:12px;font:12px "IBM Plex Mono",monospace;border:1px solid var(--ln);padding:0 6px;color:var(--mu);background:#000}
+.team{display:grid;grid-template-columns:repeat(auto-fit,minmax(190px,1fr));gap:12px}
+.person{background:var(--pn);border:1px solid var(--ln);border-top:4px solid var(--ye);padding:16px 12px;text-align:center;display:flex;flex-direction:column;align-items:center;gap:6px}
+.av{width:96px;height:96px;border:2px dashed var(--ln);background:#000;display:grid;place-items:center;font:700 34px "Barlow Condensed",Arial Narrow,Arial,sans-serif;color:var(--ye);overflow:hidden;letter-spacing:1px}
+.av img{width:100%;height:100%;object-fit:cover;display:block}.av.has{border-style:solid;border-color:var(--ye)}
+.person h3{font-size:22px}.role{color:var(--mu);font-size:13px;min-height:20px}
+.person .links{display:flex;gap:6px;min-height:8px}
+footer{margin:26px 0 10px;color:var(--mu);font-size:13px;display:flex;flex-wrap:wrap;gap:10px;justify-content:space-between}
+kbd{background:#000;border:1px solid var(--ln);padding:0 6px;border-radius:3px;font-size:12px}
+@media(prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important}}
+</style></head><body>
+<canvas id="bgfx" aria-hidden="true"></canvas>
+<div class="top"><div><span class="logo">Safety Training Hub</span><span class="nv"><button id="fxb" type="button">Background: On</button></span></div></div>
+<main>
+<section class="hero"><span class="k">Choose your mode</span><h1>Learn safety by <em>doing</em> the job</h1>
+<p>Three ways to train: investigate a disaster as a detective, inspect factory floors as a Safety Manager Engineer, or ask The Prof anything about safety and risk management.</p></section>
+
+<h2 class="sec">Modes</h2><p>Each mode has its own home page. You can return here from any of them with the Home button.</p>
+<div class="modes">
+<article class="mode"><span class="kb">1</span><span class="ic" aria-hidden="true">🔎</span><span class="no">Mode 1</span><h3>Case Files</h3>
+<p>Work a real industrial disaster like an investigator: search the rooms, question witnesses and piece the timeline together.</p>
+<ul><li>Searchable scenes and clue combining</li><li>Witness interrogation</li><li>Hints, difficulty levels and a final report</li></ul>
+<div class="tags"><span class="tag">Case study</span><span class="tag">3 difficulties</span></div>
+<a class="btn y" href="cases.html">Open Case Files</a></article>
+
+<article class="mode"><span class="kb">2</span><span class="ic" aria-hidden="true">🦺</span><span class="no">Mode 2</span><h3>Safety Manager</h3>
+<p>Step into the role of Safety Manager Engineer and inspect four sites: terms, accident investigation, fire and mechanical safety.</p>
+<ul><li>4 interactive chapters, 108 items</li><li>Score and final report per chapter</li><li>Progress saved in this browser</li></ul>
+<div class="tags"><span class="tag">Chapters</span><span class="tag" id="sp">Progress: 0%</span></div>
+<a class="btn y" href="safety.html">Open Safety Manager</a></article>
+
+<article class="mode"><span class="kb">3</span><span class="ic" aria-hidden="true">🎓</span><span class="no">Mode 3</span><h3>The Prof</h3>
+<p>Chat with the AI professor of Safety and Risk Management. Ask about any lecture topic, take the daily quiz and climb the leaderboard.</p>
+<ul><li>Ask questions in a lecture-hall chat</li><li>Daily quiz at 6:00 PM</li><li>Leaderboard tiers</li></ul>
+<div class="tags"><span class="tag">Chatbot</span><span class="tag">Daily quiz</span></div>
+<a class="btn y" href="the-prof.html">Open The Chat Bot</a></article>
+</div>
+
+<h2 class="sec">The team</h2><p>The people who built this website.</p>
+<div class="team" id="team"></div>
+
+<footer><span>Shortcuts: <kbd>1</kbd> Case Files &middot; <kbd>2</kbd> Safety Manager &middot; <kbd>3</kbd> The Prof</span><span>Progress is saved in this browser.</span></footer>
+</main>
+<script>
+/* TEAM: fill in role and photo for each person. photo = path to an image file (e.g. "team/yousef-s.jpg"), leave "" to show initials. */
+const TEAM=[
+{name:'Yousef Shamsaldeen',role:'Safety Manager Mode',photo:''},
+{name:'Mostafa Zidan',role:'Case Studies Mode',photo:''},
+{name:'Mohammed Nagy',role:'Safety Manager Mode',photo:''},
+{name:'Yousef Abdelmoneim',role:'Chat Bot Mode',photo:''},
+{name:'Yousef Elmohamady',role:'Case Studies Mode',photo:''}];
+const esc=s=>String(s).replace(/[&<>"]/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c]));
+document.getElementById('team').innerHTML=TEAM.map(p=>{const ini=p.name.split(/\s+/).map(w=>w[0]).join('').slice(0,2).toUpperCase();
+return`<article class="person"><div class="av ${p.photo?'has':''}">${p.photo?`<img src="${esc(p.photo)}" alt="${esc(p.name)}">`:ini}</div><h3>${esc(p.name)}</h3><span class="role">${esc(p.role)}</span></article>`}).join('');
+/* Safety Manager progress, same keys as the chapters */
+(function(){const K=[['sm_terms',13],['aig1',42],['msf1',31],['msm1',22]];let d=0,t=0;
+K.forEach(([k,n])=>{t+=n;try{const o=JSON.parse(localStorage.getItem(k)||'{}');d+=Math.min(n,Object.keys(o.dec||o.a||{}).length)}catch(e){}});
+document.getElementById('sp').textContent='Progress: '+Math.round(100*d/t)+'%'})();
+addEventListener('keydown',e=>{if(e.ctrlKey||e.metaKey||e.altKey||e.target.matches('input,textarea'))return;
+const m={1:'cases.html',2:'safety.html',3:'the-prof.html'}[e.key];if(m)location.href=m});
+addEventListener('pageshow',()=>{});
+</script>
+<script src="fx.js"></script>
+</body></html>
